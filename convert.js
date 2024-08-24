@@ -14,7 +14,7 @@ function convertToAsciiArt(arg) {
     var text = arg.toUpperCase();
 
     sResult = '';
-    for (var line = 0, lines = 5; line < lines; line++) {
+    for (var line = 0, lines = 5, LastLine = lines - 1; line < lines; line++) {
       var textLine = '';
 
       for (var char of text) {
@@ -26,9 +26,12 @@ function convertToAsciiArt(arg) {
           textLine += '     '; // spaces for characters not in map
         }
       }
-      sResult += textLine + '\n';
+      sResult += textLine;
+      sResult += line === LastLine ? '' : '\n';
     }
   }
 
   return sResult;
 }
+
+module.exports = convertToAsciiArt;
