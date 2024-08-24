@@ -7,6 +7,11 @@ if (InputText) {
   process.stdout.write(convertToAsciiArt(InputText));
 }
 
+/**
+ * Convert each character of a string into 5x5 ascii art.
+ * @param {string} arg - input text.
+ * @returns {string | null} a grid of characters if input is string, otherwise `null`.
+ */
 function convertToAsciiArt(arg) {
   var sResult = null;
 
