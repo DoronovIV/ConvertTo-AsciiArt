@@ -8,7 +8,7 @@ I've kept the original licenses, since I'm mostly not aware of software distribu
 
 ## Features
 - **Extensibility:** can either be used as a standalone thing, or processed in an external file.
-- **Linux support:** successfully tested on Debian 12.
+- **Linux support:** successfully tested on Debian 12 and Ubuntu-based WSL.
 - **JavaScript:** an opportunity to modify the script using the language you are familiar with.
 
 ## Prerequisites
