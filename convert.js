@@ -26,7 +26,7 @@ function convertToAsciiArt(arg) {
         if (map[char]) {
           var asciiLines = map[char];
 
-          textLine += asciiLines[line] + '  ';
+          textLine += asciiLines[line] + ' ';
         } else {
           textLine += '     '; // spaces for characters not in map
         }
