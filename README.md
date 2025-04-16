@@ -1,5 +1,13 @@
 # ConvertTo-AsciiArt
 
+## Versions
+
+- `main` - the main branch that was froked from the original repos,
+- `default` - a NodeJS application that was my original intent,
+- `go` - a Go (golang) version of the app.
+
+As I wanted to try something new, I got aware of Go programming language and became fond of it rapidly over time.
+
 ## Overview
 Forked from the [original idea](https://github.com/dabeastnet/ConvertTo-AsciiArt), which I used to customize my terminal profile. I like it, but I'm not much into PowerShell scripting.
 <br />
@@ -8,28 +16,32 @@ I've kept the original licenses, since I'm mostly not aware of software distribu
 
 ## Features
 - **Extensibility:** can either be used as a standalone thing, or processed in an external file.
-- **Linux support:** successfully tested on Debian 12 and Ubuntu-based WSL.
-- **JavaScript:** an opportunity to modify the script using the language you are familiar with.
+- **Linux support:** successfully tested on Debian 12 and Ubuntu-based WSL. Can be set up for Apple Mac, I will try it out shortly.
+- **Go:** an opportunity to modify the script using the language you are familiar with.
 
 ## Prerequisites
-- [NodeJs](https://nodejs.org/en) version `4.9.1` and higher,
-- *Optional*: [nvm](https://github.com/nvm-sh/nvm) - node version manager.
+- Latest binary file from the `releases` tab.
+- *Optional*: [Go toolchain](https://go.dev/doc/install) - a development environment for creating and running go applications.
+- *Optional*: [cobra-cli package](https://github.com/spf13/cobra-cli) a dependency module which helped me generate the cli API
+
+## The API
+You can use the app by using `asci` command. The main argument is `con` which stands for *convert*. It's fit for me, but you may change it by editing the corresponding property at `app-config.json` file and then rebuilding the project.
+
+Here's how you do that:
+- WORK IN PROGRESS
 
 ## Installation
 No specific installation process is needed. I usually retrieve the output like that:
-``` JS
-const execSync = require('child_process').execSync;
-const dec = new TextDecoder("utf-8");
-
-const data = dec.decode(execSync('node convert.js test').buffer);
+``` GO
+WORK IN PROGRESS
 ```
 
 ## Usage
 
 ### Converting Text to ASCII Art
 To convert a simple text string to ASCII art:
-```
-node convert.js Hello
+``` Shell
+asci con Hello
 ```
 Output will be the ASCII art representation of "Hello":
 
@@ -43,8 +55,8 @@ H   H EEEE  LLLL  LLLL   OOO
 
 ### Extended Character Support
 Demonstrates converting a string with mixed characters:
-```
-node convert.js 13375P34K!?
+``` Shell
+asci con 13375P34K!?
 ```
 Displays ASCII art for each character, including spaces and exclamation marks:
 
